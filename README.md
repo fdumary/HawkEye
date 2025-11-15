@@ -13,6 +13,8 @@
 
 ## Setup
 
+Site is live at https://fdumary.github.io/HawkEye/.
+
 ## Contributors
 
 ## Demo video
