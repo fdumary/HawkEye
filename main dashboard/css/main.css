@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.v55_58 {
+  width: 100%;
+  height: 1024px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v55_59 {
+  width: 100%;
+  height: 100%;
+  background: rgba(20,33,0,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v55_60 {
+  width: 832px;
+  height: 113px;
+  background: rgba(255,255,255,0.10000000149011612);
+  opacity: 1;
+  position: absolute;
+  top: 323px;
+  left: 299px;
+  border: 1px solid rgba(235,220,197,1);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  overflow: hidden;
+}
+.v55_61 {
+  width: 576px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 338px;
+  left: 333px;
+  font-family: Source Code Pro;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 0.75;
+  text-align: left;
+}
+.v55_62 {
+  width: 288px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 137px;
+  left: 419px;
+  font-family: Source Code Pro;
+  font-weight: Regular;
+  font-size: 32px;
+  opacity: 1;
+  text-align: left;
+}
+.v55_74 {
+  width: 135px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 137px;
+  left: 876px;
+  font-family: Source Code Pro;
+  font-weight: Regular;
+  font-size: 32px;
+  opacity: 1;
+  text-align: left;
+}
+.v55_76 {
+  width: 116px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 137px;
+  left: 1195px;
+  font-family: Source Code Pro;
+  font-weight: Regular;
+  font-size: 32px;
+  opacity: 1;
+  text-align: left;
+}
+.v55_72 {
+  width: 173px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 137px;
+  left: 91px;
+  font-family: Source Code Pro;
+  font-weight: Regular;
+  font-size: 32px;
+  opacity: 1;
+  text-align: left;
+}
+.v55_78 {
+  width: 454px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 251px;
+  left: 308px;
+  font-family: Source Code Pro;
+  font-weight: Regular;
+  font-size: 36px;
+  opacity: 1;
+  text-align: left;
+}
+.v55_90 {
+  width: 576px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 566px;
+  left: 333px;
+  font-family: Source Code Pro;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 0.75;
+  text-align: left;
+}
+.v55_91 {
+  width: 832px;
+  height: 113px;
+  background: rgba(255,255,255,0.10000000149011612);
+  opacity: 1;
+  position: absolute;
+  top: 554px;
+  left: 308px;
+  border: 1px solid rgba(235,220,197,1);
+}
+.v55_92 {
+  width: 281px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 482px;
+  left: 308px;
+  font-family: Source Code Pro;
+  font-weight: Regular;
+  font-size: 36px;
+  opacity: 1;
+  text-align: left;
+}
+.v55_95 {
+  width: 832px;
+  height: 113px;
+  background: rgba(255,255,255,0.10000000149011612);
+  opacity: 1;
+  position: absolute;
+  top: 785px;
+  left: 308px;
+  border: 1px solid rgba(235,220,197,1);
+}
+.v55_96 {
+  width: 324px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 713px;
+  left: 308px;
+  font-family: Source Code Pro;
+  font-weight: Regular;
+  font-size: 36px;
+  opacity: 1;
+  text-align: left;
+}
+.v55_63 {
+  width: 389px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 46px;
+  left: 525px;
+  font-family: Source Code Pro;
+  font-weight: Regular;
+  font-size: 36px;
+  opacity: 1;
+  text-align: left;
+}
+.v55_69 {
+  width: 303px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 46px;
+  left: 1022px;
+  font-family: Source Code Pro;
+  font-weight: Regular;
+  font-size: 36px;
+  opacity: 1;
+  text-align: left;
+}
+.v55_70 {
+  width: 152px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 46px;
+  left: 91px;
+  font-family: Source Code Pro;
+  font-weight: Regular;
+  font-size: 36px;
+  opacity: 1;
+  text-align: center;
+}
+.v56_223 {
+  width: 655px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 800px;
+  left: 318px;
+  font-family: Source Code Pro;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 0.75;
+  text-align: left;
+}
