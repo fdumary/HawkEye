@@ -13,7 +13,9 @@
 
 ## Setup
 
-Site is live at https://fdumary.github.io/HawkEye/.
+Site: https://fdumary.github.io/HawkEye/.
+
+Prototype: https://www.figma.com/proto/8O7I9w7Fu4zy4SaRK92tyN/desktop-web-page?node-id=43-2&t=cSDgYgKrZZtSALWe-1&scaling=min-zoom&content-scaling=fixed&page-id=40%3A2&starting-point-node-id=43%3A2
 
 ## Contributors
 
