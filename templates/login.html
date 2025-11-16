@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Hawkeye</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=3">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <img class="brand-img" src="{{ url_for('static', filename='images/hawkeye-logo.svg') }}" alt="Hawkeye logo">
+                <div class="brand-text-wrap">
+                    <span class="brand-text">Hawkeye</span>
+                    <small class="brand-tag">Secure Base Access</small>
+                </div>
+            </div>
+            <div class="navbar-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/login" class="nav-link active">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container login-container">
+        <div class="login-card hawkeye-card">
+            <h1>Hawkeye Sign-In</h1>
+            <p class="login-subtitle">Authenticate using device camera or upload</p>
+
+            <!-- Camera Section -->
+            <div class="camera-section">
+                <div class="camera-container">
+                    <video id="video" class="camera-feed" autoplay playsinline></video>
+                    <canvas id="canvas" style="display: none;"></canvas>
+                    <div class="camera-overlay">
+                        <div class="face-detection-box"></div>
+                        <p>Position your face in the center</p>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button id="startCameraBtn" class="btn btn-primary" onclick="startCamera()">Start Camera</button>
+                    <button id="captureBtn" class="btn btn-success" onclick="capturePhoto()" style="display: none;">Capture Photo</button>
+                    <button id="stopCameraBtn" class="btn btn-danger" onclick="stopCamera()" style="display: none;">Stop Camera</button>
+                    <button id="uploadPhotoBtn" class="btn btn-secondary" onclick="document.getElementById('photoInput').click()">Upload Photo</button>
+                </div>
+            </div>
+
+            <!-- File Upload -->
+            <input type="file" id="photoInput" accept="image/*" style="display: none;">
+
+            <!-- Message Display -->
+            <div id="message" class="message" style="display: none;"></div>
+
+            <!-- Preview and Authenticate -->
+            <div id="previewSection" style="display: none;">
+                <div class="preview-container">
+                    <img id="preview" src="" alt="Preview">
+                </div>
+                <div class="preview-actions">
+                    <button class="btn btn-success" onclick="authenticateWithFace()">Authenticate</button>
+                    <button class="btn btn-secondary" onclick="resetLogin()">Retake</button>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loadingState" class="loading-state" style="display: none;">
+                <div class="spinner"></div>
+                <p>Processing face recognition...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hawkeye</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=2">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <img class="brand-img" src="{{ url_for('static', filename='images/hawkeye-logo.svg') }}" alt="Hawkeye logo">
+                <div class="brand-text-wrap">
+                    <span class="brand-text">Hawkeye</span>
+                    <small class="brand-tag">Officer Dashboard</small>
+                </div>
+            </div>
+            <div class="navbar-menu">
+                <span id="userGreeting" class="user-greeting"></span>
+                <button class="nav-link btn btn-logout" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container dashboard-container">
+        <div class="dashboard-grid">
+            <!-- Profile Card -->
+            <div class="card profile-card">
+                <h2>Personnel Profile</h2>
+                <div class="profile-info">
+                    <div class="info-row">
+                        <span class="label">Name:</span>
+                        <span id="profileName" class="value">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Rank:</span>
+                        <span id="profileRank" class="value">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Unit:</span>
+                        <span id="profileUnit" class="value">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Clearance Level:</span>
+                        <span id="profileClearance" class="value clearance-badge">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Access Areas Card -->
+            <div class="card access-card">
+                <h2>Authorized Access Areas</h2>
+                <div id="accessAreas" class="access-areas">
+                    <p>Loading access areas...</p>
+                </div>
+            </div>
+
+            <!-- Quick Access Card -->
+            <div class="card quick-access-card">
+                <h2>Request Area Access</h2>
+                <select id="areaSelect" class="form-select">
+                    <option value="">Select an area...</option>
+                    <option value="barracks">Barracks</option>
+                    <option value="armory">Armory</option>
+                    <option value="command_center">Command Center</option>
+                    <option value="cafeteria">Cafeteria</option>
+                    <option value="war_room">War Room</option>
+                </select>
+                <button class="btn btn-primary" onclick="requestAreaAccess()">Request Access</button>
+                <div id="accessMessage" class="message" style="display: none;"></div>
+            </div>
+
+            <!-- Statistics Card -->
+            <div class="card stats-card">
+                <h2>Session Information</h2>
+                <div class="stats-info">
+                    <div class="stat">
+                        <span class="stat-label">Login Time:</span>
+                        <span id="loginTime" class="stat-value">-</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Session Status:</span>
+                        <span class="stat-value" style="color: #4CAF50;">🟢 Active</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin Panel (if authorized) -->
+            <div id="adminPanel" class="card admin-card" style="display: none;">
+                <h2>Admin Console</h2>
+                <button class="btn btn-info" onclick="viewAccessLog()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align:middle; margin-right:8px;" xmlns="http://www.w3.org/2000/svg"><path d="M3 5h18M7 3v4M17 3v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                    View Access Log
+                </button>
+                <button class="btn btn-info" onclick="viewAllPersonnel()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align:middle; margin-right:8px;" xmlns="http://www.w3.org/2000/svg"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM6 20v-1a4 4 0 014-4h4a4 4 0 014 4v1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    View All Personnel
+                </button>
+                <div id="adminContent" style="margin-top: 15px;"></div>
+            </div>
+        </div>
+
+        <!-- Modal for Admin Data -->
+        <div id="modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle">Data</h2>
+                <div id="modalBody" style="max-height: 500px; overflow-y: auto;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
